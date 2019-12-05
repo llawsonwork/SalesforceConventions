@@ -1,31 +1,30 @@
 ##Salesforce Naming Conventions
 
-Naming conventions make the application easier to read and maintain. The naming standards documented here cover customization and configuration areas of salesforce. Regardless of the context in which names are used, Names should be descriptive, concrete, and specific rather than general. Having a generalized name such as ProductLine can have different semantics depending upon the context. It’s better to use something the business identifies with and that will not create a potential conflict with other applications; e.g., ReverseMortgage.
+Naming conventions make the application easier to read and maintain. The naming standards documented here cover customization and configuration areas of salesforce. Regardless of the context in which names are used, Names should be descriptive, concrete, and specific rather than general. Having a generalized name such as ServiceNeed can have different semantics depending upon the context. It’s better to use something the organizatio identifies with and that will not create a potential conflict with other applications; e.g., ScreeningItem.
 
 ### 1. Custom Objects
 #### Rules for Naming
-Custom object names should be unique, beginning with an uppercase letter. Whole words should be used and use of acronyms and abbreviations should be limited. The object name should be singular (e.g. Review vs. Reviews, or OrderItem vs. Order Items) and should not include any underscores "_". The object label when at all possible should be similar to that of the object name since giving the label a different name than the object will make the object hard to find in some place within Salesforce.
+Custom object names should be unique, beginning with an uppercase letter. Whole words should be used and use of acronyms and abbreviations should be limited. The object name should be singular (e.g. Visit vs. Visits, or ReferralRequest vs. Referral Requests) and should not include any underscores "_". The object label when at all possible should be similar to that of the object name since giving the label a different name than the object will make the object hard to find in some place within Salesforce.
 
 #### Exceptions
-Widely used and commonly understood acronyms and abbreviations can be used instead of the long form. For example HTTP or URL or ACMA. Added an underscore is acceptable if you are prefixing the object name to denote it is part of an application. For example: OrderApplication_Order and OrderApplication_OrderItem. Notice that OrderItem does not have any underscores.
+Widely used and commonly understood acronyms and abbreviations can be used instead of the long form. For example HTTP or URL or ACMA. Added an underscore is acceptable if you are prefixing the object name to denote it is part of an application. For example: HealthyStepsApplication_Visit and HealthyStepsApplication_Child.
 
 #### Demonstrative Example
-The following are examples of custom object naming that should _not_ be used 
-The following are examples of custom object naming that should _not_ be used 
+The following are examples of custom object naming that should _not_ be used. 
 
 |Object  Name | Reason |
 |-------------|:--------|
-```CustAsset```| Abbreviations have made this object name hard to understand 
-```Orders``` | Object names should always be singular. 
-```Order_Item``` | Object names should not have underscores. 
+```HSAddress```| Abbreviations have made this object name hard to understand 
+```Visits``` | Object names should always be singular. 
+```Screening_Item``` | Object names should not have underscores. 
 
 The following are examples of the naming convention that will be used:
 
 |Object  Name | Reason |
 |-------------|:--------|
-```CustomerAsset``` | Removing ambiguity from the name will improve readability and maintainability 
+```HealthyStepsAddress``` | Removing ambiguity from the name will improve readability and maintainability 
 ```Order``` |  Making object names singular will ensure a standard naming convention across all objects. 
-```OrderItem``` | Removing all underscores will help keep a standard naming convention as many times there are words that some may separate into two words and other may not. For example: ```Zipcode``` vs. ```Zip Code```.
+```ScreeningItem``` | Removing all underscores will help keep a standard naming convention as many times there are words that some may separate into two words and other may not. For example: ```Zipcode``` vs. ```Zip Code```.
 
 ____
 
