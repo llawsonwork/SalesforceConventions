@@ -10,7 +10,7 @@ Custom object names should be unique, beginning with an uppercase letter. Whole 
 Widely used and commonly understood acronyms and abbreviations can be used instead of the long form. For example HTTP or URL or ACMA. Added an underscore is acceptable if you are prefixing the object name to denote it is part of an application. For example: HealthyStepsApplication_Visit and HealthyStepsApplication_Child.
 
 #### Demonstrative Example
-The following are examples of custom object naming that should _not_ be used. 
+The following are examples of custom object naming that should NOT be used. 
 
 |Object  Name | Reason |
 |-------------|:--------|
@@ -39,7 +39,7 @@ Widely used and commonly understood acronyms and abbreviations can be used inste
 
 ##### Demonstrative Example
 
-The following are examples of custom field naming that should not be used 
+The following are examples of custom field naming that should NOT be used: 
 
 | Custom Field Name |  Reason |
 |-------------------|:--------|
@@ -74,7 +74,7 @@ Widely used and commonly understood acronyms and abbreviations can be used inste
 
 #### Demonstrative Example
 
-The following are examples of validation rule naming that should **not** be used:
+The following are examples of validation rule naming that should NOT be used:
 
 | Validation Rule Name | Reason |
 |----------------------|:-------|
@@ -108,7 +108,7 @@ As there is an upper limit for the number of characters in the name field the us
 
 #### Demonstrative Example
 
-The following are examples of workflow rule naming that should not be used:
+The following are examples of workflow rule naming that should NOT be used:
 
 |Attribute | Example | Reason| 
 |----------|:---------|--------|
@@ -140,7 +140,7 @@ As there is an upper limit for the number of characters in the name field the us
 
 #### Demonstrative Example
 
-The following are examples of field update naming that should not be used :
+The following are examples of field update naming that should NOT be used :
 
 |Attribute | Example | Reason |
 |----------|:--------|--------|
@@ -171,7 +171,7 @@ As there is an upper limit for the number of characters in the name field the us
 
 #### Demonstrative Example
 
-The following are examples of email alert naming that should not be used:
+The following are examples of email alert naming that should NOT be used:
 
 |Attribute | Example | Reason 
 |----------|:--------|-------
