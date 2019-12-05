@@ -50,9 +50,9 @@ The following are examples of the naming convention that will be used
 
 | Custom Field Name | Reason 
 |-------------------|:--------|
-```CountryCode``` | A succinct description of the object using whole words. Description is not required since the name is a commonly understood term. 
+```CountyCode``` | A succinct description of the object using whole words. Description is not required since the name is a commonly understood term. 
 ```ZipCode``` | Removing all underscores will help keep a standard naming convention as many times there are words that some may separate into two words and other may not. Description is not required since the name is a commonly understood term. 
-```CompletionDate``` | Date that the order process was completed. Should only be set once payment is received and order was fulfilled. Even though the name seems to make sense, there are business rules that need to be explained, and as such, a longer description was needed.
+```VisitDate``` | Date that the visit was occured. Should only be set to the beginning of visit. If visit occurs on Monday but screenings are entered on Wednesday, the date for Monday should still be used. Even though the name seems to make sense, there are business rules that need to be explained, and as such, a longer description was needed.
 
 ____
 
@@ -64,9 +64,9 @@ Validation rule names should be unique, beginning with an uppercase letter. Whol
 
 &lt;FIELD&gt;  &lt;RULE&gt;  &lt;OPTIONAL DEPENDENCY&gt;  
 
-```Postal Code Required (Suburb)``` 
+```Postal Code Required (County)``` 
 
-The above example shows that Postal Code is required dependent on values in the Suburb field. The exact rule definition is in the detail but keeping this format helps keeps the naming as intuitive as possible without being too restrictive.
+The above example shows that Postal Code is required dependent on values in the County field. The exact rule definition is in the detail but keeping this format helps keeps the naming as intuitive as possible without being too restrictive.
 
 #### Exceptions
 
@@ -84,9 +84,9 @@ The following are examples of the naming convention that will be used:
 
 | Validation Rule Name | Reason |
 |----------------------|:-------|
-```Street Address < 60 chars``` | Field and rule clearly identified
-```Zipcode not blank``` | ibid
-```Occupation required``` | ibid
+```Street Address < 60 chars``` | FIELD and RULE clearly identified
+```Zipcode not blank``` | FIELD and RULE clearly identified
+```Occupation required``` | FIELD and RULE clearly identified
 ``` Zipcode required (Suburb)``` | FIELD, RULE, and DEPENDENCY clearly identified
 
 ____
@@ -118,8 +118,8 @@ The following are examples of workflow rule naming that should not be used:
 
 | Attribute | Example | Reason |
 |-----------|:---------|:-------|
-|Workflow Rule Name | Date of Death Changed | Describes the event that will fire the rule in a succinct way |
-|Description | Sends an email to the Deceased Customer public group and updates the inactive flag of the contact for batch processing | Provides a clear and brief description of the intention of the actions performed. The description can be more easily updated and migrated as changes are made over time|
+|Workflow Rule Name | Legal Guardian Changed | Describes the event that will fire the rule in a succinct way |
+|Description | Sends an email to specialist notifying them of Legal Guardianship Change and updates the flag of the contact for batch processing | Provides a clear and brief description of the intention of the actions performed. The description can be more easily updated and migrated as changes are made over time|
 
 ____
 
@@ -144,15 +144,15 @@ The following are examples of field update naming that should not be used :
 
 |Attribute | Example | Reason |
 |----------|:--------|--------|
-|Field Update Name | Customer Date of Death | This describes the rule that fires the field update but does not tell me which field is updated and to what value |
-|Description | Updates the customer inactive flag | Doesn’t tell the reviewer at first glance what value is used and if this flag is used in other processes| 
+|Field Update Name | Patient Date of Death | This describes the rule that fires the field update but does not tell me which field is updated and to what value |
+|Description | Updates the patient inactive flag | Doesn’t tell the reviewer at first glance what value is used and if this flag is used in other processes| 
 
 The following are examples of the naming convention that will be used :
 
 |Attribute | Example | Reason |
 |----------|:--------|--------|
-|Field Update Name | Set Customer Inactive Flag – False | Describes the field being updated and what value will be used when updating the field 
-| Description | Updates the inactive flag on the customer record which will be used by batch apex for processing | Briefly describes interdependencies that may rely on this action being performed |
+|Field Update Name | Set Patient Inactive Flag – False | Describes the field being updated and what value will be used when updating the field 
+| Description | Updates the inactive flag on the patient record which will be used by batch apex for processing | Briefly describes interdependencies that may rely on this action being performed |
 
 
 ### 6. Email Alerts
@@ -181,7 +181,7 @@ The following are examples of the naming convention that will be used :
 
 |Attribute | Example | Reason 
 |----------|:--------|------- 
-Email Alert Description  |Email Deceased Customer Team – New Deceased Customer | Describes who is emailed and which template is used
+Email Alert Description  |Email Deceased Patient Team – New Deceased Patient | Describes who is emailed and which template is used
 
 ____
 
@@ -202,7 +202,7 @@ As there is an upper limit for the number of characters in the name field the us
 
 #### Demonstrative Example
 
-The following are examples of approval process naming that should not be used :
+The following are examples of approval process naming that should NOT be used :
 
 Approval Process Name | Reason 
 ----------------------|:----------
@@ -234,7 +234,7 @@ As there is an upper limit for the number of characters in the name field the us
 
 #### Demonstrative Example
 
-The following are examples of approval process step naming that should not be used :
+The following are examples of approval process step naming that should NOT be used :
 
 Approval Process Step Name | Reason 
 ---------------------------|:-------
@@ -264,18 +264,18 @@ Widely used and commonly understood acronyms and abbreviations can be used inste
 
 #### Demonstrative Example
 
-The following are examples of Visualforce Page naming that should not be used:
+The following are examples of Visualforce Page naming that should NOT be used:
 
 Visualforce Page Name | Reason 
 ----------------------|:-------
-Override_Customer_View | Underscores should not be used 
+Override_Specialist_View | Underscores should not be used 
 Custoverrideview | Name and Label becomes hard to read without capitalization 
 
 The following are examples of the naming convention that will be used :
 
 Visualforce Page Name | Reason 
 ----------------------|:-------
-CustomerView | Clearly defined and succinct name 
+PatientView | Clearly defined and succinct name 
 MailFaxRequest | Clearly defined and succinct name
 
 ____
@@ -292,11 +292,11 @@ Widely used and commonly understood acronyms and abbreviations can be used inste
 
 #### Demonstrative Example
 
-The following are examples of Apex class naming that should not be used :
+The following are examples of Apex class naming that should NOT be used :
      
 Class Name | Reason   
 -----------|:------  
-FHACustomer | Using acronyms should be avoided as they are not mnemonic    
+MAPatient | Using acronyms should be avoided MedicaidPatient   
 GrtBgClass | Whole words should be used in place of shortened versions  GreatBigClass      
 addresshandler | Class does not begin with an uppercase letter     
 Address_Handler | Underscores should be avoided   
@@ -305,10 +305,10 @@ The following are examples of the naming convention that will be used:
 
 Class Name | Reason 
 -----------|:------
-Customer | Full word used to describe the class and starts with uppercase 
+Patient | Full word used to describe the class and starts with uppercase 
 AddressHandler | Multiple words concatenated with subsequent words capitalized
 MailFaxController | Controller Extension for the Mail_Fax__c object
-CustomerController | Customer controller for the customer object
+PatientController | Patient controller for the Patient object
 
 ____
 
@@ -324,7 +324,7 @@ Widely used and commonly understood acronyms and abbreviations can be used inste
 
 #### Demonstrative Example
 
-The following are examples of Apex batch, scheduleable, and queueable class naming that should not be used 
+The following are examples of Apex batch, scheduleable, and queueable class naming that should NOT be used 
 
 Class Name | Reason 
 -----------|:------
@@ -398,7 +398,7 @@ Methods should be verbs, in mixed case with the first letter lowercase, with the
 Widely used and commonly understood acronyms and abbreviations can be used instead of the long form. For example HTTP or URL or ACMA.
 
 #### Demonstrative Example
-The following are examples of Apex method naming that should not be used 
+The following are examples of Apex method naming that should NOT be used 
 
 Method Name | Reason 
 -----------|:------
@@ -426,7 +426,7 @@ None
 
 #### Demonstrative Example
 
-The following are examples of Apex variable naming that should not be used 
+The following are examples of Apex variable naming that should NOT be used 
 
 Variable Name | Reason
 -----------|:------
@@ -451,7 +451,7 @@ None
 
 #### Demonstrative Example
 
-The following are examples of Apex constant naming that should not be used 
+The following are examples of Apex constant naming that should NOT be used 
 
 Class Name | Reason 
 -----------|:------
@@ -476,7 +476,7 @@ None
 
 #### Demonstrative Example
 
-The following are examples of Apex type naming that should not be used 
+The following are examples of Apex type naming that should NOT be used 
 
 Type Name | Reason 
 -----------|:------
