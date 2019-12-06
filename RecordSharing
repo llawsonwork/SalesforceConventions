@@ -1,4 +1,8 @@
-###Sharing & Security
+## HealthySteps Record Permissions Setup
+
+
+
+### Sharing & Security
 
 There are many different mechanisms in which access to Salesforce is controlled. It is easiest to think of security in Salesforce broken up into the following 3 different categories: 
 
@@ -8,7 +12,7 @@ There are many different mechanisms in which access to Salesforce is controlled.
 
 1. **System & Application Level Access** – System and application level access is access users are granted to perform specific actions across the Salesforce application. There are many different actions a user can perform that can be controlled such as user creation, ability to export data, ability to modify setup objects, etc. These permissions are controlled by Profiles and Permission Sets. 
 
-###Profiles & Permission Sets
+### Profiles & Permission Sets
 
 As mentioned above Profiles & Permission Sets control the object level access and System & Application level access for users. You can pretty much do the same thing with Profiles and Permission Sets except for that a user can only have one profile where you can assign multiple permission sets to a user or profile.  
 
@@ -18,18 +22,18 @@ It is recommended to use profiles to create a base set of permissions for users 
 
 System Administrator  
 
-Sales User  
+Supervisor User  
 
-Legal User  
+Specialist Super User  
 
-Marketing User  
+Specialist User  
 
 
 **Permission Sets** 
 
-Order Management Application User  
+HealthySteps Application User  
 
-Order Management Application Admin  
+HealthySteps Application Admin  
 
 The permission sets would be assigned on a user-by-user basis based on the applications that the users need access to. This allows you to easily add or remove access to users for specific applications instead of having to create profiles of various different combinations to handle the same use cases. Think of permission sets as similar to Access Control Lists (ACL). 
 
