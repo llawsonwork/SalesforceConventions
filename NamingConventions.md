@@ -1,4 +1,4 @@
-##Salesforce Naming Conventions
+# HealthySteps Salesforce Naming Conventions
 
 Naming conventions make the application easier to read and maintain. The naming standards documented here cover customization and configuration areas of salesforce. Regardless of the context in which names are used, Names should be descriptive, concrete, and specific rather than general. Having a generalized name such as ServiceNeed can have different semantics depending upon the context. It’s better to use something the organizatio identifies with and that will not create a potential conflict with other applications; e.g., ScreeningItem.
 
